@@ -1,0 +1,38 @@
+@model List<Category>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>cateoryssss</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>
+                    Category Name
+                </td>
+                <td>
+                    Categoty Order
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model.OrderBy(u => u.DisplayOrdaer))
+            {
+            <tr>
+                <td>
+                    @obj.Name
+                </td>
+                <td>
+                    @obj.DisplayOrdaer
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
